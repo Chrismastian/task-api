@@ -2,7 +2,9 @@
 
 REST API for **TaskFlow**, a task-management app. Laravel 10 + Sanctum token auth.
 
-**Live API:** `https://task-api-production-3d38.up.railway.app`
+**Live API:** `https://task-api-production-3d38.up.railway.app` · **Frontend:** [task-frontend](https://github.com/Chrismastian/task-frontend)
+
+![TaskFlow dashboard](docs/screenshots/dashboard.png)
 
 ## Stack
 
@@ -11,7 +13,7 @@ REST API for **TaskFlow**, a task-management app. Laravel 10 + Sanctum token aut
 | Framework | Laravel 10 |
 | Auth | Laravel Sanctum (bearer tokens) |
 | Database | MySQL 8 |
-| Tests | PHPUnit — 8 feature tests, 18 assertions |
+| Tests | PHPUnit — 9 feature tests, 19 assertions |
 | Deploy | Railway (Nixpacks) |
 
 ## Endpoints
