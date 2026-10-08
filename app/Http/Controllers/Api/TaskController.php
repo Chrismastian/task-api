@@ -15,7 +15,7 @@ class TaskController extends Controller
             ->when($request->status, fn ($q, $s) => $q->where('status', $s))
             ->when($request->priority, fn ($q, $p) => $q->where('priority', $p))
             ->when($request->search, fn ($q, $s) => $q->where('title', 'like', "%{$s}%"))
-            ->orderByRaw("FIELD(priority, 'high', 'medium', 'low')")
+            ->orderByRaw("CASE priority WHEN 'high' THEN 1 WHEN 'medium' THEN 2 ELSE 3 END")
             ->orderBy('due_date')
             ->latest()
             ->get();
