@@ -2,7 +2,7 @@
 
 REST API for **TaskFlow**, a task-management app. Laravel 10 + Sanctum token auth.
 
-**Live API:** `https://task-api-production.up.railway.app` (updated after deploy)
+**Live API:** `https://task-api-production-3d38.up.railway.app`
 
 ## Stack
 
