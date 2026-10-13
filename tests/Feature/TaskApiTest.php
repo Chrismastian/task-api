@@ -37,6 +37,17 @@ class TaskApiTest extends TestCase
         $this->getJson('/api/tasks')->assertUnauthorized();
     }
 
+    /**
+     * Regression: a plain GET (no Accept: application/json) used to blow up with
+     * a 500 because the auth middleware tried to build a redirect to a
+     * non-existent `login` route. It must be a 401 for every client.
+     */
+    public function test_unauthenticated_request_without_json_accept_header_is_401(): void
+    {
+        $this->get('/api/tasks')->assertUnauthorized();
+        $this->post('/api/tasks', ['title' => 'nope'])->assertUnauthorized();
+    }
+
     public function test_user_can_create_a_task(): void
     {
         Sanctum::actingAs(User::factory()->create());
