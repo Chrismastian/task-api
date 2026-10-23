@@ -1,5 +1,7 @@
 # TaskFlow API
 
+[![CI](https://github.com/Chrismastian/task-api/actions/workflows/tests.yml/badge.svg)](https://github.com/Chrismastian/task-api/actions/workflows/tests.yml)
+
 REST API for **TaskFlow**, a task-management app. Laravel 10 + Sanctum token auth.
 
 **Live API:** `https://task-api-production-3d38.up.railway.app` · **Frontend:** [task-frontend](https://github.com/Chrismastian/task-frontend)
