@@ -52,6 +52,10 @@ php artisan serve
 php artisan test
 ```
 
+## API Specification
+
+OpenAPI 3.0 spec: [`openapi.yaml`](openapi.yaml) — import into Postman, Insomnia, or Swagger UI.
+
 ## Example
 
 ```bash
@@ -59,5 +63,5 @@ TOKEN=$(curl -s -X POST $API/api/auth/login \
   -H "Content-Type: application/json" -H "Accept: application/json" \
   -d '{"email":"you@example.com","password":"password123"}' | jq -r .token)
 
-curl -s $API/api/tasks -H "Authorization: Bearer $TOKEN" -H "Accept: application/json"
+curl -s $API/api/tasks -H "Authorization: Bearer ***" -H "Accept: application/json"
 ```
